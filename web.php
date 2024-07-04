@@ -1,0 +1,28 @@
+<?php
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ProjetController;
+use App\Http\Controllers\TacheController;
+use App\Http\Controllers\AdminController;
+Route::get('/home',function(){return view('PageacceuilTaskPlanner');})->name('home');
+Route::get('/', function () {return view('ConnexionEmployee');})->name('ConnexionEmployee');
+Route::get('/signUp',function(){return view('InscriptionAdmin');})->name('signUp');
+Route::get('/GestionEmployee',[EmployeeController::class,'goToEmployee'])->name('GestionEmployee');
+Route::get('/GestionProjet',[ProjetController::class,'goToProjet'])->name('GestionProjet');
+Route::get('/GestionTache',[TacheController::class,'goToTache'])->name('GestionTache');
+Route::post('/ajoutEmployee',[EmployeeController::class,'addEmployee'])->name('ajoutEmployee');
+Route::post('/InscriptionAdmin',[AdminController::class,'signUpAdmin'])->name('Inscription');
+Route::post('/ConnexionAdmin',[AdminController::class,'loginAdmin'])->name('ConnexionAdmin');
+Route::post('/Connexion',[EmployeeController::class,'goToProfile'])->name('Connexion');
+Route::post('/Update',[EmployeeController::class,'updatePassword'])->name('Update');
+Route::post('/Delete',[EmployeeController::class,'deleteAccount'])->name('Delete');
+Route::post('/Projet',[ProjetController::class,'addProject'])->name('Projet');
+Route::post('/Projet2',[ProjetController::class,'updateProject'])->name('Projet2');
+Route::post('/Projet3',[ProjetController::class,'deleteProject'])->name('Projet3');
+Route::post('/Tache',[TacheController::class,'addTask'])->name('Tache');
+Route::post('/Tache2',[TacheController::class,'updateTask'])->name('Tache2');
+Route::post('/Tache3',[TacheController::class,'deleteTask'])->name('Tache3');
+Route::get('/Contact',function(){return view('Contact');})->name('Contact');
+Route::post('/searchEmployee',[EmployeeController::class,'searchEmployee'])->name('searchEmployee');
+Route::post('searchProject',[ProjetController::class,'searchProject'])->name('searchProject');
+Route::post('/searchTask',[TacheController::class,'searchTask'])->name('searchTask');
