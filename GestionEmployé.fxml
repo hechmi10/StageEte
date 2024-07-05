@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="718.0" prefWidth="1134.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.planificationtaches.GestionEmployéController">
+    <stylesheets>
+        <URL value="@styleConnexion.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="employeeTable" layoutX="290.0" layoutY="41.0" prefHeight="370.0" prefWidth="793.0">
+        <columns>
+          <TableColumn fx:id="cinColumn" prefWidth="75.0" text="Cin" />
+          <TableColumn fx:id="nomColumn" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="prenomColumn" prefWidth="75.0" text="Prenom" />
+            <TableColumn fx:id="adresseColumn" prefWidth="75.0" text="Adresse" />
+            <TableColumn fx:id="emailColumn" prefWidth="171.39996337890625" text="Email" />
+            <TableColumn fx:id="motDePasseColumn" prefWidth="117.20001220703125" text="Mot De Passe" />
+            <TableColumn fx:id="numTelColumn" prefWidth="199.4000244140625" text="Numéro de téléphone" />
+        </columns>
+      </TableView>
+      <VBox layoutX="24.0" layoutY="41.0" prefHeight="540.0" prefWidth="258.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="170.0" text="Gestion des employés:" />
+            <Label text="Ajouter Employé:" />
+            <Label prefHeight="20.0" prefWidth="58.0" text="Cin:" />
+            <TextField fx:id="cinField" prefHeight="26.0" prefWidth="0.0" />
+            <Label prefHeight="20.0" prefWidth="80.0" text="Nom:" />
+            <TextField fx:id="nomField" />
+            <Label prefHeight="20.0" prefWidth="78.0" text="Prènom:" />
+            <TextField fx:id="prenomField" prefHeight="26.0" prefWidth="0.0" />
+            <Label prefHeight="20.0" prefWidth="91.0" text="Adresse:" />
+            <TextField fx:id="adresseField" prefHeight="26.0" prefWidth="0.0" />
+            <Label prefHeight="20.0" prefWidth="69.0" text="Email:" />
+            <TextField fx:id="emailField" prefHeight="26.0" prefWidth="0.0" />
+            <Label prefHeight="20.0" prefWidth="169.0" text="Numéro de téléphone:" />
+            <TextField fx:id="numTelField" prefHeight="26.0" prefWidth="0.0" />
+            <Label prefHeight="20.0" prefWidth="254.0" text="Mettre à jour le mdp de l'employé:" />
+             <Label prefHeight="20.0" prefWidth="69.0" text="Email:" />
+             <TextField fx:id="updateEmailField" prefHeight="26.0" prefWidth="0.0" />
+            <Label prefHeight="20.0" prefWidth="254.0" text="Ancien mot de passe:" />
+            <PasswordField fx:id="motDePasseField" prefHeight="26.0" prefWidth="0.0" />
+            <Label prefHeight="20.0" prefWidth="254.0" text="Nouveau mot de passe:" />
+            <PasswordField fx:id="nouveauMotDePasseField" prefHeight="26.0" prefWidth="0.0" />
+         </children>
+      </VBox>
+      <ButtonBar layoutX="450.0" layoutY="437.0" prefHeight="42.0" prefWidth="430.0">
+        <buttons>
+          <Button fx:id="addEmployeeButton" mnemonicParsing="false" onAction="#handleAddEmployeeButton" text="Ajouter" />
+            <Button fx:id="updateEmployeeButton" mnemonicParsing="false" onAction="#handleUpdateEmployeeButton" prefHeight="41.0" prefWidth="126.0" text="Mettre à jour" />
+            <Button fx:id="deleteEmployeeButton" mnemonicParsing="false" onAction="#handleDeleteEmployeeButton" text="Supprimer" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

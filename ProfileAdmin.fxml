@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" minHeight="300.0" minWidth="300.0" prefHeight="472.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.planificationtaches.AdminController">
+    <stylesheets>
+        <URL value="@styleConnexion.css" />
+    </stylesheets>
+    <children>
+        <VBox layoutX="43.0" layoutY="52.0" prefHeight="354.0" prefWidth="338.0" styleClass="container mt-4">
+            <children>
+                <Label prefHeight="20.0" prefWidth="170.0" styleClass="h2 mb-3" text="Profile de l'admin" />
+                <Label fx:id="nameLabel" prefHeight="20.0" prefWidth="170.0" styleClass="form-label mb-3" />
+                <Label fx:id="surnameLabel" prefHeight="20.0" prefWidth="177.0" styleClass="form-label mb-3" />
+                <Label fx:id="emailLabel" prefHeight="20.0" prefWidth="249.0" styleClass="form-label mb-3" />
+                <Label fx:id="telLabel" prefHeight="20.0" prefWidth="273.0" styleClass="form-label mb-3" />
+                <VBox>
+                    <Label text="À propos de moi" />
+                    <Label text="Ingénieur Informatique en SW Consulting" />
+                </VBox>
+
+                <!-- Skills -->
+                <VBox>
+                    <Label text="Compétences" />
+                    <HBox>
+                        <Label text="Développement Web (Frontend)" />
+                        <ProgressBar progress="0.8" />
+                    </HBox>
+                    <HBox>
+                        <Label text="Développement Web (Backend)" />
+                        <ProgressBar progress="0.9" />
+                    </HBox>
+                </VBox>
+
+                <!-- Education -->
+                <VBox>
+                    <Label text="Éducation:" />
+                    <Label prefHeight="20.0" prefWidth="121.0" text="Esprit Monastir" />
+                </VBox>
+            </children>
+        </VBox>
+        <ButtonBar layoutX="450.0" layoutY="437.0" prefHeight="42.0" prefWidth="430.0" />
+    </children>
+</AnchorPane>

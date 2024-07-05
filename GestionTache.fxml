@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="670.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.planificationtaches.GestionTacheController">
+    <stylesheets>
+        <URL value="@styleConnexion.css" />
+    </stylesheets>
+    <children>
+        <TableView fx:id="taskTable" layoutX="296.0" layoutY="41.0" prefHeight="370.0" prefWidth="635.0">
+            <columns>
+                <TableColumn fx:id="nomColumn" prefWidth="102.4000244140625" text="Nom du tache" />
+                <TableColumn fx:id="dateDebutColumn" prefWidth="106.80001831054688" text="Date de début" />
+                <TableColumn fx:id="dateFinColumn" minWidth="83.39996337890625" prefWidth="83.39996337890625" text="Date du fin" />
+                <TableColumn fx:id="estimationColumn" minWidth="40.5999755859375" prefWidth="91.20001220703125" text="Estimation" />
+                <TableColumn fx:id="idProjetColumn" minWidth="68.20001220703125" prefWidth="111.20001220703125" text="Id du projet" />
+                <TableColumn fx:id="cinEmployeeColumn" minWidth="122.20001220703125" prefWidth="135.4000244140625" text="Cin de l'employé" />
+            </columns>
+        </TableView>
+        <VBox layoutX="24.0" layoutY="41.0" prefHeight="540.0" prefWidth="258.0">
+            <children>
+                <Label prefHeight="20.0" prefWidth="170.0" text="Gestion des taches:" />
+                <Label prefHeight="20.0" prefWidth="118.0" text="Ajouter Tache:" />
+                <Label prefHeight="20.0" prefWidth="122.0" text="Nom du tache:" />
+                <TextField fx:id="nomTacheField" />
+                <Label prefHeight="20.0" prefWidth="108.0" text="Date de début:" />
+                <DatePicker fx:id="dateDebutField" prefHeight="26.0" prefWidth="262.0" />
+                <Label prefHeight="20.0" prefWidth="91.0" text="Date de fin:" />
+                <DatePicker fx:id="dateFinField" prefHeight="26.0" prefWidth="293.0" />
+            <Label prefHeight="20.0" prefWidth="91.0" text="Estimation:" />
+            <TextField fx:id="estimationField" prefHeight="26.0" prefWidth="293.0" />
+            <Label prefHeight="20.0" prefWidth="91.0" text="Id du projet:" />
+            <TextField fx:id="idProjetField" prefHeight="26.0" prefWidth="293.0" />
+                <Label prefHeight="20.0" prefWidth="122.0" text="Cin de l'employé:" />
+                <TextField fx:id="cinEmployeeField" prefHeight="26.0" prefWidth="293.0" />
+                <Label prefHeight="20.0" prefWidth="254.0" text="Mettre à jour la tache:" />
+                <Label prefHeight="20.0" prefWidth="112.0" text="Nom du tache:" />
+                <TextField fx:id="updateNomTacheField" prefHeight="26.0" prefWidth="0.0" />
+                <Label prefHeight="20.0" prefWidth="254.0" text="Nouveau date du début:" />
+                <DatePicker fx:id="nouveauDateDebutField" prefHeight="26.0" prefWidth="295.0" />
+                <Label prefHeight="20.0" prefWidth="254.0" text="Nouveau date du fin:" />
+                <DatePicker fx:id="nouveauDateFinField" prefHeight="26.0" prefWidth="308.0" />
+            <Label prefHeight="20.0" prefWidth="254.0" text="Nouveau estimation:" />
+            <TextField fx:id="nouveauEstimationField" prefHeight="26.0" prefWidth="293.0" />
+            </children>
+        </VBox>
+        <ButtonBar layoutX="450.0" layoutY="437.0" prefHeight="42.0" prefWidth="430.0">
+            <buttons>
+                <Button fx:id="addTaskButton" mnemonicParsing="false" onAction="#handleAddTaskButton" text="Ajouter" />
+                <Button fx:id="updateTaskButton" mnemonicParsing="false" onAction="#handleUpdateTaskButton" prefHeight="41.0" prefWidth="126.0" text="Mettre à jour" />
+                <Button fx:id="deleteTaskButton" mnemonicParsing="false" onAction="#handleDeleteTaskButton" text="Supprimer" />
+            </buttons>
+        </ButtonBar>
+    </children>
+
+</AnchorPane>

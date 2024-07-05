@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="310.0" prefWidth="393.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.planificationtaches.ConnexionEmployéController">
+
+
+    <!-- Import your stylesheet correctly -->
+    <stylesheets>
+        <URL value="@styleConnexion.css" />
+    </stylesheets>
+
+    <!-- Padding is set using Insets -->
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+
+    <children>
+        <VBox fx:id="mainContent">
+            <Label layoutX="117.0" layoutY="14.0" styleClass="titleLabel" text="Connexion de l'employé" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+
+            <Label layoutX="7.0" layoutY="62.0" styleClass="label" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="loginEmailField" layoutY="82.0" styleClass="textField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label layoutX="7.0" layoutY="127.0" styleClass="label" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <PasswordField fx:id="loginPasswordField" layoutY="155.0" styleClass="textField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Button layoutX="7.0" layoutY="219.0" onAction="#handleLogin" styleClass="button" text="Se connecter" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+
+            <Label fx:id="loginErrorLabel" styleClass="errorLabel" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+        </VBox>
+    </children>
+</AnchorPane>

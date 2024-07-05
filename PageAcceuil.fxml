@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="536.0" prefWidth="1652.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.planificationtaches.HomeController">
+    <!-- Top Navbar -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="navbar">
+            <Label styleClass="navbar-title" text="TaskPlanner" />
+            <Button onAction="#handleConnexion" styleClass="navbar-btn" text="Déconnexion" />
+            <Button onAction="#handleEmployeeGestion" prefHeight="51.0" prefWidth="211.0" styleClass="navbar-btn" text="Gestion des Employés" />
+            <Button onAction="#handleProjectGestion" styleClass="navbar-btn" text="Gestion des Projets" />
+            <Button onAction="#handleTaskGestion" styleClass="navbar-btn" text="Gestion des Taches" />
+            <Region HBox.hgrow="ALWAYS" />
+        </HBox>
+    </top>
+
+    <!-- Left Sidebar -->
+    <left>
+        <VBox fx:id="mainContent" alignment="TOP_CENTER" prefHeight="276.0" prefWidth="1000.0" spacing="10" styleClass="sidebar">
+            <Button onAction="#handleEmployeeGestion" minHeight="30.0" minWidth="200.1" prefHeight="42.0" prefWidth="257.0" styleClass="sidebar-btn" text="Gestion des Employés" />
+            <Button onAction="#handleProjectGestion"  minHeight="30.0" minWidth="200.1" prefHeight="42.0" prefWidth="257.0" styleClass="sidebar-btn" text="Gestion des Projets" />
+            <Button onAction="#handleTaskGestion"  minHeight="30.0" minWidth="200.1" prefHeight="42.0" prefWidth="257.0" styleClass="sidebar-btn" text="Gestion des Taches" />
+        </VBox>
+    </left>
+
+    <!-- Center Content Area -->
+    <center>
+        <!-- Placeholder content, actual content will vary based on button clicks -->
+        <VBox alignment="CENTER" prefWidth="1348.0" spacing="20" styleClass="content">
+            <Label styleClass="content-title" text="Bienvenue dans TaskPlanner, l'application qui permet aux employés de recevoir et accomplir leurs tâches avec facilité." />
+        </VBox>
+    </center>
+
+    <!-- Bottom Footer -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10" styleClass="footer">
+            <Label styleClass="footer-text" text="© 2024 Task Planner" />
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.planificationtaches.GestionProjetController">
+    <stylesheets>
+        <URL value="@styleConnexion.css" />
+    </stylesheets>
+    <children>
+        <TableView fx:id="projectTable" layoutX="421.0" layoutY="41.0" prefHeight="370.0" prefWidth="437.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="108.20001220703125" text="Id du projet" />
+                <TableColumn fx:id="nomProjetColumn" prefWidth="102.4000244140625" text="Nom du projet" />
+                <TableColumn fx:id="dateDebutColumn" prefWidth="122.39996337890625" text="Date de début" />
+                <TableColumn fx:id="dateFinColumn" minWidth="4.20001220703125" prefWidth="100.0" text="Date du fin" />
+            </columns>
+        </TableView>
+        <VBox layoutX="24.0" layoutY="41.0" prefHeight="540.0" prefWidth="258.0">
+            <children>
+                <Label prefHeight="20.0" prefWidth="170.0" text="Gestion des projets:" />
+                <Label text="Ajouter Projet:" />
+                <Label prefHeight="20.0" prefWidth="152.0" text="Identifiant du projet:" />
+                <TextField fx:id="idField" prefHeight="26.0" prefWidth="0.0" />
+                <Label prefHeight="20.0" prefWidth="122.0" text="Nom du projet:" />
+                <TextField fx:id="nomProjetField" />
+                <Label prefHeight="20.0" prefWidth="108.0" text="Date de début:" />
+                <DatePicker fx:id="dateDebutField" prefHeight="26.0" prefWidth="262.0" />
+                <Label prefHeight="20.0" prefWidth="91.0" text="Date de fin:" />
+                <DatePicker fx:id="dateFinField" prefHeight="26.0" prefWidth="293.0" />
+                <Label prefHeight="20.0" prefWidth="254.0" text="Mettre à jour le projet:" />
+                <Label prefHeight="20.0" prefWidth="112.0" text="Nom du projet:" />
+                <TextField fx:id="updateNomProjetField" prefHeight="26.0" prefWidth="0.0" />
+                <Label prefHeight="20.0" prefWidth="254.0" text="Nouveau date du début:" />
+                <DatePicker fx:id="nouveauDateDebutField" prefHeight="26.0" prefWidth="295.0" />
+                <Label prefHeight="20.0" prefWidth="254.0" text="Nouveau date du fin:" />
+                <DatePicker fx:id="nouveauDateFinField" prefHeight="26.0" prefWidth="308.0" />
+            </children>
+        </VBox>
+        <ButtonBar layoutX="450.0" layoutY="437.0" prefHeight="42.0" prefWidth="430.0">
+            <buttons>
+                <Button fx:id="addProjectButton" mnemonicParsing="false" onAction="#handleAddProjectButton" text="Ajouter" />
+                <Button fx:id="updateProjectButton" mnemonicParsing="false" onAction="#handleUpdateProjectButton" prefHeight="41.0" prefWidth="126.0" text="Mettre à jour" />
+                <Button fx:id="deleteProjectButton" mnemonicParsing="false" onAction="#handleDeleteProjectButton" text="Supprimer" />
+            </buttons>
+        </ButtonBar>
+    </children>
+
+</AnchorPane>
